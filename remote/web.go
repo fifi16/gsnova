@@ -34,7 +34,7 @@ func startHTTPProxyServer(listenAddr string, cert, key string) {
 	mux.HandleFunc("/", indexCallback)
 	mux.HandleFunc("/stat", statCallback)
 	mux.HandleFunc("/stackdump", stackdumpCallback)
-	mux.HandleFunc("/ws", websocket.WebsocketInvoke)
+	mux.HandleFunc("/ys", websocket.WebsocketInvoke)
 	mux.HandleFunc("/http/pull", httpChannel.HTTPInvoke)
 	mux.HandleFunc("/http/push", httpChannel.HTTPInvoke)
 	mux.HandleFunc("/http/test", httpChannel.HttpTest)
