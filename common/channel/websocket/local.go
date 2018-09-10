@@ -25,7 +25,7 @@ func (ws *WebsocketProxy) CreateMuxSession(server string, conf *channel.ProxyCha
 	if nil != err {
 		return nil, err
 	}
-	u.Path = "/ws"
+	u.Path = "/ys"
 	wsDialer := &websocket.Dialer{}
 	wsDialer.NetDial = channel.NewDialByConf(conf, u.Scheme)
 	wsDialer.TLSClientConfig = channel.NewTLSConfig(conf)
